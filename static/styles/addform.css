@@ -1,0 +1,31 @@
+body {
+    background-color: #ACA585;
+}
+
+form {
+    display: table;
+    text-align: left;
+    width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+    font-size: 15px;
+}
+
+label {
+    font-size: 19px;
+    display: table-row;
+    color: #363459;
+}
+
+select {
+    display: table-cell;
+    font-size: 15px;
+}

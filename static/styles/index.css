@@ -1,0 +1,33 @@
+body {
+    background-color: #ACA585;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    padding: 18px;
+    background-color: lightgreen;
+    border-radius: 10px;
+
+}
+button{
+    border-style: hidden;
+    background-color: lightgreen;
+}
+
+#query_container {
+    background-color: beige;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+#user{
+    background-color: beige;
+    width: 50%;
+}

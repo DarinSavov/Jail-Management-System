@@ -1,0 +1,3 @@
+db:
+  uri: "postgresql://admin:root@db:5432/jail_db"
+  localuri: "postgresql://savy:grespost@localhost:5432/JailDB"

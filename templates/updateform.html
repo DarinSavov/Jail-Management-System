@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles/addform.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move an inmate to another cell</title>
+</head>
+<body>
+    <button><a href="{{url_for ('index')}}">Back</a></button> <br><br>
+    <p>Enter the ID of the inmate you want to delete</p>
+    <form  method="POST">
+    <label>Inmate Name</label>
+    <select name="inmatename">
+        {%for inmate in inmates %}
+            <option value="{{ inmate.fullname }}" SELECTED>{{ inmate.fullname }}</option>
+        {% endfor %}     
+    </select> <br>
+    <label>Cell Number</label>
+    <select name="cellnum">
+        {%for cell in cells %}
+            <option value="{{ cell.cellnum }}" SELECTED>{{ cell.cellnum }}</option>
+        {% endfor %}     
+    </select> <br>
+    <button type="submit">Change inmate's cell</button>
+    </form>
+</body>
+</html>

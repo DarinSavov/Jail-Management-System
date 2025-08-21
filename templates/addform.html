@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles/addform.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Inmate</title>
+</head>
+<body>
+    <button id="back"><a href="{{url_for ('index')}}">Back</a></button> <br><br>
+    <h1>Input Information for the Inmate</h1>
+    <form method="POST">
+    <label>Full Name</label>
+    <input type="text" id="name" name="name"> <br>
+    <label>Inmate Number</label>
+    <input type="number" id="number" name="number"> <br>
+    <label>Arrival Date</label>
+    <input type="date" id="date" name="arrival_date"> <br>
+    <label>Sentence Time</label>
+    <input type="date" id="time" name="sentence_time"> <br>
+    <label>Penalty</label>
+    <input type="text" id="penalty" name="penalty"> <br>
+    <label>Cell Number</label>
+    <select name="cellnum">
+        {%for cell in cells %}
+            <option value="{{ cell.cellnum }}" SELECTED>{{ cell.cellnum }}</option>
+        {% endfor %}     
+    </select> <br>
+    <label>Crime</label>
+    <select name="crime">
+        {%for crime in crimes%}
+        <option value="{{ crime.description }}" SELECTED>{{ crime.description }}</option>
+    {% endfor %}    
+    </select> <br>
+    <button id="submit" type="submit">Submit</button>
+    </form>
+</body>
+</html>

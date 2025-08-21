@@ -1,0 +1,28 @@
+body {
+    background-color: #ACA585;
+}
+
+
+label {
+    font-size: 19px;
+    display: table-row;
+    color: #363459;
+}
+
+
+input {
+    display: table-cell;
+    font-size: 15px;
+}
+
+form {
+    display: table;
+    text-align: left;
+    width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles/addform.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <label>Username</label>
+    <input type="text" name="username"><br>
+    <label>Password</label>
+    <input type="password" name="password"><br>
+    <button id="submit">Submit</button>
+    <script>
+        document.getElementById("submit").addEventListener("click", function() {
+            const username = document.querySelector('input[name="username"]').value;
+            sessionStorage.setItem("username", JSON.stringify(username));
+            window.location.href = "/";
+        })
+    </script>
+</body>
+</html>

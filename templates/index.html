@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Management System</title>
+</head>
+<body>
+        <div  id="navbar">
+            <div id="user">
+                <ul>
+                    <li><a href="{{url_for ('login')}}" id="login">Login</a></li>
+                </ul>
+            </div>
+            <div id="query_container">
+                <ul id="query_list">
+                    <li class="active"><a href="{{url_for ('add_inmate')}}">Add an inmate</a></li>
+                    <li class="active"><a href="{{url_for ('get_inmates')}}">List of all inmates</a></li>
+                    <li class="active"><a href="{{url_for ('delete_inmate')}}">Delete an inmate</a></li>
+                    <li class="active"><a href="{{url_for ('update_inmate')}}">Update an inmate's cell</a></a></li>
+                    <li class="active"><a href="{{url_for ('get_crime_statistics')}}">Get statistics for a specific crime</a></a></li>
+                    </ul>
+            </div>
+        </div>
+        <script>
+            var login = document.getElementById("login");
+            sessionStorage.getItem("username");
+            if (sessionStorage.getItem("username")) {
+                login
+                .innerHTML = "Logout";
+                login
+                .href = "{{url_for ('logout')}}";
+                login
+                .addEventListener("click", function() {
+                    sessionStorage
+                    .removeItem("username");
+                   
+                })
+            }else{
+                login
+                .innerHTML = "Login";
+                document.getElementById("query_list").style.display = "none";
+            }
+        </script>
+</body>
+</html>
